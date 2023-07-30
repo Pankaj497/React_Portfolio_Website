@@ -23,9 +23,17 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.Backimg{
+  background-image: url(./backg.png);
+}
 
 .App-link {
   color: #61dafb;
+}
+
+.AppFont{
+  font-weight: normal;
+  font-weight: bold;
 }
 
 @keyframes App-logo-spin {
@@ -36,6 +44,7 @@
     transform: translateX(90%) rotate(15000deg);
   }
 }
+
  
 
 

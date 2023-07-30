@@ -1,10 +1,14 @@
 import React from "react";
+import { Card,CardBody } from "reactstrap";
 function Headers(){
     return(
-    <div style={{background:'yellow',padding:20}}>
-        <h1>Hi i am pankaj</h1>
-        <hr/>
-        <h2>Hi i am learning react</h2>
+       
+    <div className="App"  style={{fontFamily:'Poppins',color:'#4a54f1'}}>
+        <Card style={{background:'orange',padding:20}}>
+         <CardBody>
+        <h2 className="AppFont">Welcome To Cources Application</h2>
+        </CardBody>
+        </Card>
     </div>
     );
 }

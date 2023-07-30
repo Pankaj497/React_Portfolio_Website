@@ -1,28 +1,47 @@
 import logo from './logo.svg';
 import './App.css';
 import Headers from "./Headers";
-import { Button } from "reactstrap";
+import { Button, Col, Container, Row } from "reactstrap";
+import { ToastContainer,toast } from 'react-toastify';
+import Home from './Home';
+import Course from './Cources';
+import AllCources from './AllCources';
+import AddCourse from './AddCourse';
+import Menus from './Menus';
+import { BrowserRouter as Router,Link, Route, Routes } from 'react-router-dom';
+import background from './backg.png'
 
 function App() {
+
   return (
-    <div className="App">
-      <h1>this is bootstrap component</h1>
-      <Button color="warning" outline size='lg'>this is first bootstrap button</Button>
+    <div className='Backimg'>
+      <Router>
+      <ToastContainer/>
+      <Container>
+    
+     {/* <Course course = {{title:"Python Course", description:"This is just testing"}} />
+      <Course course = {{title:"Java Course", description:"This is just testing"}} />
+      <Course course = {{title:"C++ Course", description:"This is just testing"}} /> */}
       <Headers />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Row>
+        <Col md={4}>
+          <h2 style={{margin:4}}>Menu</h2>
+        <Menus />
+
+        </Col>
+        <Col md={8}>
+          <Routes>
+          <Route path='/' Component={Home} exact />
+          <Route path='/AddCourse' Component={AddCourse} exact />
+          <Route path='/AllCources' Component={AllCources} exact />
+          </Routes>
+        </Col>
+      </Row>
+
+
+      </Container>
+      </Router>
+
     </div>
   );
 }
