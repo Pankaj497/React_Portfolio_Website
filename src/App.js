@@ -10,6 +10,7 @@ import AddCourse from './AddCourse';
 import Menus from './Menus';
 import { BrowserRouter as Router,Link, Route, Routes } from 'react-router-dom';
 import background from './backg.png'
+import StartPage from './StartPage';
 
 function App() {
 
@@ -23,6 +24,11 @@ function App() {
       <Course course = {{title:"Java Course", description:"This is just testing"}} />
       <Course course = {{title:"C++ Course", description:"This is just testing"}} /> */}
       <Headers />
+      <Row>
+        <Col md={12}>
+          
+        </Col>
+      </Row>
       <Row>
         <Col md={4}>
           <h2 style={{margin:4}}>Menu</h2>
